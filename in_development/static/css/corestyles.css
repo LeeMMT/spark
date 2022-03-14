@@ -15,8 +15,8 @@ body {
   --white: #fff;
   --soft-grey: #9e9e9e;
   --black: #141414;
-  --text: #696663;
-  --blue: #36c5ed;
+  --text: hsl(193, 3%, 30%);
+  --blue: hsl(193, 84%, 57%);
   --green: #61c5bc;
   --gold: #fff8a7;
 }
@@ -43,7 +43,7 @@ body {
 .partition {
   position: relative;
   z-index: 1;
-  padding: 16px 0;
+  padding: 32px 0;
 }
 
 .partition:nth-of-type(even) {
@@ -78,6 +78,7 @@ a:active {
 
 .text-wrapper p {
   margin-bottom: 8px;
+  color: var(--text);
 }
 
 .text-wrapper p:last-of-type {
@@ -320,6 +321,9 @@ footer {
   height: max-content;
   padding: 16px;
   background-color: var(--green);
+}
+
+.interior-banner .text-wrapper p {
   color: var(--white);
 }
 
