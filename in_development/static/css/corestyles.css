@@ -17,7 +17,7 @@ body {
   --black: #141414;
   --text: hsl(193, 3%, 30%);
   --blue: hsl(193, 84%, 57%);
-  --green: #61c5bc;
+  --green: hsl(175, 46%, 58%);
   --gold: #fff8a7;
 }
 
@@ -44,6 +44,39 @@ body {
   z-index: 1;
   padding: 64px 0;
 }
+
+.partition:nth-of-type(odd) {
+  background-color: hsl(0, 0%, 96%);
+}
+
+/*Partition dividers*/
+
+.partition.shape-divider {
+  position: relative;
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.waves svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 100px;
+}
+
+.waves .shape-fill {
+  fill: hsl(193, 84%, 57%);
+}
+
+/*Link styling*/
 
 a {
   text-decoration: none;
@@ -235,6 +268,66 @@ header {
   margin-top: 64px;
 }
 
+/*About Us*/
+
+.card-container {
+  max-width: 1200px;
+  display: flex;
+  gap: 64px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.card-container .card {
+  max-width: 300px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px;
+  text-align: center;
+}
+
+.card-container .card.dark {
+  background-color: hsl(0, 0%, 96%);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px;
+}
+
+.card-container .card p {
+  color: var(--text);
+  font-size: 16px;
+}
+
+h2.card-header {
+  color: var(--text);
+  font-family: "Open Sans Reg", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.card-container span,
+.assurance-grid span {
+  font-size: 24px;
+  font-family: "Open Sans Semi Bold";
+  color: var(--green);
+  background: rgb(53, 198, 237);
+  background: linear-gradient(90deg, rgba(53, 198, 237, 1) 0%, rgba(97, 197, 188, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.assurance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  text-align: center;
+}
+
+.assurance-grid .card {
+  max-width: 300px;
+  padding: 16px;
+}
+
 /*Footer*/
 
 footer {
@@ -281,8 +374,20 @@ footer {
 
 /*Utility*/
 
+.centered {
+  text-align: center;
+}
+
 .blue {
   color: var(--blue);
+}
+
+.marg-bot.large {
+  margin-bottom: 64px !important;
+}
+
+.marg-bot.med {
+  margin-bottom: 32px !important;
 }
 
 .marg-top.small {
