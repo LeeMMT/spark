@@ -47,20 +47,3 @@
 .hero-inner .text-wrapper p {
   color: var(--white);
 }
-
-/*Media Queries*/
-
-@media screen and (max-width: 1400px) {
-  .nav-container {
-    padding: 0 8px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .desktop-nav {
-    display: none;
-  }
-  #menu-container {
-    display: block;
-  }
-}

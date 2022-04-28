@@ -19,7 +19,7 @@ const mobileMenu = (function () {
 
   const menuAnimation = bodymovin.loadAnimation({
     container: document.querySelector("#menu-container"),
-    path: "../static/assets/animations/menu.json",
+    path: "../static/animations/menu.json",
     renderer: "svg",
     loop: false,
     autoplay: false,

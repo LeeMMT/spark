@@ -149,7 +149,7 @@ header {
   margin: 0 auto;
 }
 
-.top-nav {
+.desktop-nav {
   height: 100%;
   display: flex;
   align-items: center;
@@ -157,7 +157,7 @@ header {
   font-size: 16px;
 }
 
-.top-nav li {
+.desktop-nav li {
   height: 100%;
   display: inline-flex;
   width: max-content;
@@ -165,12 +165,12 @@ header {
   margin-left: 10px;
 }
 
-.top-nav li:first-of-type {
+.desktop-nav li:first-of-type {
   margin-left: 0;
 }
 
-.top-nav a,
-.top-nav p {
+.desktop-nav a,
+.desktop-nav p {
   display: inline-block;
   width: max-content;
   height: 80px;
@@ -178,7 +178,7 @@ header {
   line-height: 80px;
 }
 
-.top-nav a:hover {
+.desktop-nav a:hover {
   color: var(--blue);
 }
 
@@ -470,4 +470,25 @@ footer {
 @font-face {
   font-family: "Comfortaa Bold";
   src: url("../fonts/Comfortaa/Comfortaa-Bold.ttf");
+}
+
+/*Header Media Queries*/
+
+@media screen and (max-width: 1400px) {
+  .nav-container {
+    padding: 0 8px;
+  }
+  .container {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  #menu-container {
+    display: block;
+  }
 }
