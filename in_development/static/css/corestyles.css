@@ -16,8 +16,8 @@ body {
   --soft-grey: #9e9e9e;
   --black: #141414;
   --text: hsl(193, 3%, 30%);
-  --blue: hsl(193, 84%, 57%);
-  --green: hsl(175, 46%, 58%);
+  --blue: #35c6ed;
+  --green: #63c5bd;
   --gold: #fff8a7;
 }
 
@@ -91,7 +91,7 @@ body {
 }
 
 .divider-waves .shape-fill {
-  fill: var(--blue);
+  fill: #63c5bd;
 }
 
 /*Link styling*/
@@ -302,7 +302,12 @@ header {
 }
 
 .card-container .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 300px;
+  width: 100%;
+  height: max-content;
   padding: 16px;
   border-radius: 8px;
   background-color: var(--white);
@@ -350,14 +355,19 @@ h2.card-header {
   padding: 16px;
 }
 
+#our-aims .icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
 /*Footer*/
 
 footer {
   flex-shrink: 0;
   width: 100%;
-  /*background-color: var(--white);
-  background-image: linear-gradient(to left bottom, #36c5ed, #38c6e1, #43c6d5, #52c6c8, #61c5bc);*/
-  background-color: var(--blue);
+  background: rgb(53, 198, 237);
+  background: linear-gradient(0deg, rgba(53, 198, 237, 1) 0%, rgba(99, 197, 189, 1) 100%);
   color: var(--white);
 }
 
@@ -448,6 +458,96 @@ footer {
   overflow: hidden;
 }
 
+/*Header Media Queries*/
+
+@media screen and (max-width: 1400px) {
+  .nav-container {
+    padding: 0 8px;
+  }
+  .container {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  #menu-container {
+    display: block;
+  }
+}
+
+/*Footer Media Queries*/
+
+@media screen and (max-width: 750px) {
+  .divider-waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .divider-waves svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 100px;
+  }
+
+  .divider-waves .shape-fill {
+    fill: var(--green);
+  }
+}
+
+/*Icons*/
+
+.icon {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon.attendance {
+  background-image: url("../icons/attendance.svg");
+}
+
+.icon.star {
+  background-image: url("../icons/star.svg");
+}
+
+.icon.tick {
+  background-image: url("../icons/tick.svg");
+}
+
+.icon.self-worth {
+  background-image: url("../icons/self-worth.svg");
+}
+
+.icon.improved-confidence {
+  background-image: url("../icons/improved-confidence.svg");
+}
+
+.icon.academic {
+  background-image: url("../icons/academic.svg");
+}
+
+.icon.regulation {
+  background-image: url("../icons/regulation.svg");
+}
+
+.icon.health {
+  background-image: url("../icons/health.svg");
+}
+
+.icon.mindset {
+  background-image: url("../icons/mindset.svg");
+}
+
 /*Fonts*/
 
 @font-face {
@@ -493,50 +593,4 @@ footer {
 @font-face {
   font-family: "Comfortaa Bold";
   src: url("../fonts/Comfortaa/Comfortaa-Bold.ttf");
-}
-
-/*Header Media Queries*/
-
-@media screen and (max-width: 1400px) {
-  .nav-container {
-    padding: 0 8px;
-  }
-  .container {
-    padding: 16px;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  .desktop-nav {
-    display: none;
-  }
-
-  #menu-container {
-    display: block;
-  }
-}
-
-/*Footer Media Queries*/
-
-@media screen and (max-width: 750px) {
-  .divider-waves {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-  }
-
-  .divider-waves svg {
-    position: relative;
-    display: block;
-    width: calc(150% + 1.3px);
-    height: 100px;
-  }
-
-  .divider-waves .shape-fill {
-    fill: #35c6ed;
-  }
 }
