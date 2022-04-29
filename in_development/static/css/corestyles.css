@@ -31,6 +31,23 @@ body {
   line-height: 1.5em;
 }
 
+#dark-overlay {
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 20%, 0);
+  z-index: 1;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+#dark-overlay.visible {
+  display: block;
+  position: absolute;
+  background-color: hsla(0, 0%, 20%, 0.25);
+}
+
 .content {
   flex: 1 0 auto;
 }
@@ -53,9 +70,10 @@ body {
 
 .partition.shape-divider {
   position: relative;
+  padding-bottom: 214px;
 }
 
-.waves {
+.divider-waves {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -65,15 +83,15 @@ body {
   transform: rotate(180deg);
 }
 
-.waves svg {
+.divider-waves svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 100px;
+  height: 150px;
 }
 
-.waves .shape-fill {
-  fill: hsl(193, 84%, 57%);
+.divider-waves .shape-fill {
+  fill: var(--blue);
 }
 
 /*Link styling*/
@@ -194,7 +212,6 @@ header {
   max-width: 300px;
   width: calc(100% - 50px);
   bottom: 0;
-  padding: 16px 0;
   position: fixed;
   top: 96px;
   transform: translate(-100%);
@@ -216,13 +233,18 @@ header {
 
 .mobile-menu li {
   display: block;
-  padding: 8px;
+  padding: 16px;
   border-bottom: solid 1px var(--bg);
+}
+
+.mobile-menu > ul li:nth-of-type(even) {
+  background-color: hsl(0, 0%, 96%);
 }
 
 .mobile-menu a {
   display: block;
   margin: 0;
+  color: var(--text);
 }
 
 /*Interior Banners*/
@@ -333,8 +355,9 @@ h2.card-header {
 footer {
   flex-shrink: 0;
   width: 100%;
-  background-color: var(--white);
-  background-image: linear-gradient(to left bottom, #36c5ed, #38c6e1, #43c6d5, #52c6c8, #61c5bc);
+  /*background-color: var(--white);
+  background-image: linear-gradient(to left bottom, #36c5ed, #38c6e1, #43c6d5, #52c6c8, #61c5bc);*/
+  background-color: var(--blue);
   color: var(--white);
 }
 
@@ -490,5 +513,30 @@ footer {
 
   #menu-container {
     display: block;
+  }
+}
+
+/*Footer Media Queries*/
+
+@media screen and (max-width: 750px) {
+  .divider-waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .divider-waves svg {
+    position: relative;
+    display: block;
+    width: calc(150% + 1.3px);
+    height: 100px;
+  }
+
+  .divider-waves .shape-fill {
+    fill: #35c6ed;
   }
 }

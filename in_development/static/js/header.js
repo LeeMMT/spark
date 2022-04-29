@@ -1,4 +1,5 @@
 const mobileMenu = (function () {
+  const darkOverlay = document.querySelector("#dark-overlay");
   const mobileMenuBtn = document.querySelector("#menu-container");
   const mobileMenu = document.querySelector(".mobile-menu");
   let state = closed;
@@ -15,6 +16,7 @@ const mobileMenu = (function () {
   const showMenu = function () {
     document.body.classList.toggle("stop-scrolling");
     mobileMenu.classList.toggle("show-menu");
+    darkOverlay.classList.toggle("visible");
   };
 
   const menuAnimation = bodymovin.loadAnimation({
@@ -36,7 +38,7 @@ const mobileMenu = (function () {
     }
   };
 
-  window.addEventListener("scroll", checkScrollPos);
+  //window.addEventListener("scroll", checkScrollPos);
   menuAnimation.goToAndStop(4, true);
   menuAnimation.setSpeed(3);
   mobileMenuBtn.addEventListener("click", showMenu);
