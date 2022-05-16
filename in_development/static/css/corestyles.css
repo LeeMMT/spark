@@ -328,6 +328,14 @@ header {
   text-align: center;
 }
 
+.card-container.partnerships {
+}
+
+.card-container.partnerships img {
+  max-height: 64px;
+  align-self: center;
+}
+
 .card-container .card.dark {
   background-color: hsl(0, 0%, 97%);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px;
