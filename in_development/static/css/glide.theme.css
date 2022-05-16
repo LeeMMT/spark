@@ -43,7 +43,7 @@
   list-style: none;
 }
 .glide__bullet {
-  background-color: var(--blue);
+  background-color: var(--text);
   width: 9px;
   height: 9px;
   padding: 0;
@@ -63,7 +63,7 @@
   background-color: rgba(255, 255, 255, 0.5);
 }
 .glide__bullet--active {
-  background-color: var(--text);
+  background-color: var(--blue);
 }
 
 .glide__slides {
