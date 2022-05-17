@@ -440,7 +440,7 @@ footer {
 }
 
 .footer-grid a {
-  color: hsl(193, 10%, 95%);
+  color: hsl(175, 10%, 95%);
 }
 
 .footer-grid a:hover {
@@ -475,11 +475,11 @@ footer .socials svg:first-of-type {
 }
 
 footer .socials svg path {
-  fill: hsl(193, 10%, 95%);
+  fill: hsl(175, 10%, 95%);
 }
 
 footer .socials svg circle {
-  fill: hsl(193, 10%, 95%);
+  fill: hsl(175, 10%, 95%);
 }
 
 footer .socials svg:hover path,
