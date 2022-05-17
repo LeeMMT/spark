@@ -276,18 +276,30 @@ header .socials svg {
 
 .mobile-menu li {
   display: block;
-  padding: 16px;
-  border-bottom: solid 1px var(--bg);
+  padding: 8px;
+  border-top: solid 1px hsl(0, 0%, 96%);
 }
 
-.mobile-menu > ul li:nth-of-type(even) {
-  background-color: hsl(0, 0%, 96%);
+.mobile-menu li:first-of-type {
+  border-color: none;
 }
 
 .mobile-menu a {
   display: block;
   margin: 0;
   color: var(--text);
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.mobile-menu .icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
 }
 
 /*Interior Banners*/
@@ -658,6 +670,14 @@ footer .socials svg:hover circle {
 
 .icon.mindset {
   background-image: url("../icons/mindset.svg");
+}
+
+.icon.phone {
+  background-image: url("../icons/phone.svg");
+}
+
+.icon.mail {
+  background-image: url("../icons/mail.svg");
 }
 
 /*Fonts*/
