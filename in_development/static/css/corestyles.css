@@ -623,7 +623,7 @@ footer .socials svg:hover circle {
 
 @media screen and (max-width: 500px) {
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto auto;
   }
 }
 
