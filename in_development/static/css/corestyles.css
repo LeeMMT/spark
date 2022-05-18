@@ -9,6 +9,10 @@ body {
   height: 100%;
 }
 
+body {
+  position: relative;
+}
+
 /*CSS Variables*/
 
 :root {
@@ -32,19 +36,19 @@ body {
 }
 
 #dark-overlay {
-  top: 80px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: hsla(0, 0%, 20%, 0);
-  z-index: 1;
   pointer-events: none;
   transition: all 0.5s ease-in-out;
 }
 
 #dark-overlay.visible {
   display: block;
-  position: absolute;
   background-color: hsla(0, 0%, 20%, 0.25);
 }
 
@@ -150,8 +154,12 @@ h1,
 h2 {
   font-family: "Open Sans Bold", Arial, Helvetica, sans-serif;
   font-size: 32px;
-  line-height: 1.3em;
+  line-height: 1em;
   margin-bottom: 24px;
+}
+
+#testimonials {
+  line-height: 1.2em;
 }
 
 h1.small {
@@ -173,6 +181,7 @@ header {
   height: 80px;
   background-color: var(--white);
   z-index: 2;
+  overflow: hidden;
 }
 
 .nav-container {
@@ -587,6 +596,13 @@ footer .socials svg:hover circle {
 }
 
 @media screen and (max-width: 750px) {
+  body {
+    padding-top: 80px;
+  }
+  header {
+    position: fixed;
+    top: 0;
+  }
   .desktop-nav {
     display: none;
   }
